@@ -1,0 +1,66 @@
+{
+  "protocol_id": "WRRA-Cross-Domain-1.0",
+  "frozen_before_new_runs": "2026-09-27",
+  "status": "Prospective for the new finite-grid and scheduling experiments; retrospective harmonization for the previously published Game 1.0 and Grid Under Scarcity results.",
+  "author": {
+    "name": "Wonsik Choi",
+    "email": "janefather@gmail.com"
+  },
+  "architecture": "WRRA: Wonsik Reality Renderer Architecture",
+  "research_question": "Can one fixed execution grammar—Law, minimal sufficient State including necessary Residue, a transparent Renderer, bounded Search/Action, Phenotype, and Ledger—be instantiated in three structurally different domains without changing the grammar, while preserving exact answers under certified reductions?",
+  "domains": [
+    {
+      "name": "game",
+      "source": "WRRA Game 1.0",
+      "role": "Previously published exact baseline",
+      "primary_exact_system": "4x4 Connect-K with k=3",
+      "residue_system": "3x3 Go with simple ko"
+    },
+    {
+      "name": "power_grid",
+      "source": "New finite DC thermal-memory microgrid plus previously published 14-bus scarcity study",
+      "role": "New exact cross-domain test and preserved external-scale baseline"
+    },
+    {
+      "name": "scheduling",
+      "source": "New finite two-machine sequence-dependent setup problem",
+      "role": "Independent exact cross-domain test"
+    }
+  ],
+  "common_tests": [
+    {
+      "id": "T1",
+      "name": "minimal_sufficient_state",
+      "pass_condition": "The full state determines legal transitions and exact objective values in the enumerated system."
+    },
+    {
+      "id": "T2",
+      "name": "residue_necessity",
+      "pass_condition": "At least one pair of reachable full states shares the same visible state but differs in legal transitions, transition costs, or exact objective value because of omitted residue."
+    },
+    {
+      "id": "T3",
+      "name": "certified_renderer_exactness",
+      "pass_condition": "The Renderer-reduced solver has zero exact-value mismatches against the unreduced solver over every reachable state in the stated finite test scope."
+    },
+    {
+      "id": "T4",
+      "name": "computation_reduction",
+      "pass_condition": "The certified Renderer uses fewer within-domain work units than the unreduced reference on the stated test. Work units are reported by domain and are not treated as commensurate across domains."
+    }
+  ],
+  "renderer_rule": "For the new finite domains, enumerate Law-permitted actions, compute their complete one-step successor and immediate objective contribution, partition actions by a future-relevant canonical successor signature, and retain one minimum-cost representative from each class. Heuristic ranking, if any, is reported separately and is never called certified pruning.",
+  "falsification_conditions": [
+    "Any exact objective-value mismatch caused by the certified Renderer within an enumerated scope.",
+    "A claimed sufficient state that maps one represented state to more than one Law-defined legal-transition set or exact value.",
+    "No reduction in the declared within-domain work unit after Renderer overhead is exposed.",
+    "A need to alter the common execution grammar rather than only the domain Law, state variables, Renderer channels, and objective.",
+    "Failure to reproduce the published Game baseline invariants from its machine-readable ledger."
+  ],
+  "interpretation_boundary": [
+    "Passing three finite-domain tests supports portability of the execution architecture; it does not prove universal applicability.",
+    "Residue stores present constraint information required for correct transitions. It is not a prediction of a pre-existing future.",
+    "Historical Game and Grid results are preserved with their original scope and are not re-labelled as prospectively preregistered results.",
+    "Cross-domain reduction percentages are descriptive within domains because their work units differ."
+  ]
+}

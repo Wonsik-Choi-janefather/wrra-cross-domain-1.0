@@ -1,0 +1,23 @@
+{
+  "game": {
+    "title": "WRRA Game 1.0 Minimal Sufficient State Exhaustive Validation and a Playable Go Engine",
+    "doi": "10.5281/zenodo.22985378",
+    "repository": "https://github.com/Wonsik-Choi-janefather/wrra-game-1.0",
+    "source_commit": "9acb5035052d8d627524d96b635ffcb196bf44ea",
+    "published_ledger": "wrra_game_0_2_results_published.json",
+    "vendored_reproduction_source": "../vendor/wrra_game_0_2.py"
+  },
+  "grid": {
+    "title": "WRRA Grid Under Scarcity",
+    "related_dois": [
+      "10.5281/zenodo.22330256",
+      "10.5281/zenodo.22331940",
+      "10.5281/zenodo.22447864"
+    ],
+    "published_summary": "wrra_grid_scarcity_stress_summary_published.json"
+  },
+  "core": {
+    "title": "WRRA Core 1.0",
+    "doi": "10.5281/zenodo.22650956"
+  }
+}

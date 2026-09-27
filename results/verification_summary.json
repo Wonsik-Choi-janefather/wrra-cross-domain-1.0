@@ -1,0 +1,34 @@
+{
+  "artifact": "WRRA Cross-Domain 1.0",
+  "verification_date": "2026-09-27",
+  "overall_status": "PASS",
+  "scientific_checks": {
+    "domains_evaluated": 3,
+    "domains_passed": 3,
+    "renderer_value_mismatches_total": 0,
+    "residue_sensitive_domains": 3,
+    "domains_with_positive_work_reduction": 3,
+    "game_published_invariants_checked": 7,
+    "game_published_invariants_matched": 7
+  },
+  "software_checks": {
+    "unit_tests_run": 5,
+    "unit_tests_passed": 5,
+    "python_compileall": "PASS",
+    "json_parse": "PASS",
+    "citation_cff_yaml_parse": "PASS"
+  },
+  "document_checks": {
+    "report_pages": 18,
+    "page_size": "US Letter (612 x 792 pt)",
+    "visual_pages_inspected": 18,
+    "post_alt_text_render_pixel_identical_to_inspected_render": true,
+    "accessibility_findings": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "raw_markdown_marker_leaks": 0
+  },
+  "interpretation_boundary": "The three finite-domain results establish a shared, falsifiable execution grammar and exact constraint-preserving reductions within the declared models. They do not by themselves establish universal applicability or physical truth outside those models."
+}

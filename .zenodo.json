@@ -1,0 +1,42 @@
+{
+  "title": "WRRA Cross Domain 1.0 Comparative Exact Validation in Games Power Grids and Scheduling",
+  "description": "WRRA Cross Domain 1.0 tests one fixed execution grammar in games, electric power grids, and scheduling. The release reproduces the 6,036,001-state WRRA Game 1.0 exact result and adds exhaustive finite grid and scheduling experiments. Across all three domains the certified Renderer produces zero exact objective-value mismatches while reducing the declared within-domain work. Reachable same-visible-state witnesses show that omitted residue can change legality, safety, transition cost, or exact value. The archive includes code, tests, a frozen analysis plan, machine-readable Ledgers, figures, and a technical report.",
+  "creators": [
+    {
+      "name": "Choi, Wonsik",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "license": "other-open",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-09-27",
+  "keywords": [
+    "WRRA",
+    "Wonsik Reality Renderer Architecture",
+    "minimal sufficient state",
+    "residue",
+    "state sufficiency",
+    "exact quotient",
+    "certified pruning",
+    "exhaustive validation",
+    "game search",
+    "power grid",
+    "DC power flow",
+    "scheduling",
+    "complex systems",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22650956",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985378",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or report, please cite the Zenodo record for WRRA Cross Domain 1.0."
+title: "WRRA Cross Domain 1.0 Comparative Exact Validation in Games Power Grids and Scheduling"
+type: software
+version: 1.0.0
+date-released: 2026-09-27
+repository-code: "https://github.com/Wonsik-Choi-janefather/wrra-cross-domain-1.0"
+authors:
+  - family-names: Choi
+    given-names: Wonsik
+    email: janefather@gmail.com
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - WRRA
+  - minimal sufficient state
+  - residue
+  - state abstraction
+  - exact quotient
+  - power grid
+  - scheduling
+  - game search
+  - complex systems
+references:
+  - type: software
+    title: "WRRA Game 1.0 Minimal Sufficient State Exhaustive Validation and a Playable Go Engine"
+    authors:
+      - family-names: Choi
+        given-names: Wonsik
+    doi: 10.5281/zenodo.22985378
+  - type: generic
+    title: "WRRA Core 1.0"
+    authors:
+      - family-names: Choi
+        given-names: Wonsik
+    doi: 10.5281/zenodo.22650956

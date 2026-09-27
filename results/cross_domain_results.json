@@ -1,0 +1,480 @@
+{
+  "metadata": {
+    "profile": "WRRA Cross-Domain 1.0",
+    "architecture": "Wonsik Reality Renderer Architecture",
+    "author": "Wonsik Choi",
+    "email": "janefather@gmail.com",
+    "date": "2026-09-27",
+    "protocol": "protocol/preregistered_analysis_plan.json"
+  },
+  "common_execution_grammar": [
+    "SOURCE",
+    "RELATION/LAW",
+    "STATE/RESIDUE",
+    "BOUNDARY",
+    "COMMON CARRIER",
+    "UPDATE",
+    "RENDERER",
+    "PHENOTYPE",
+    "OBSERVABLE/RECORD/LEDGER"
+  ],
+  "domains": [
+    {
+      "domain": "game",
+      "status": "PASS",
+      "source_status": "published_machine_readable_baseline",
+      "source_file": "baselines/wrra_game_0_2_results_published.json",
+      "source_sha256": "bed55e8efda6f8972be0cecc04f929d900fd4292278fdce82262500bc0abbab8",
+      "exact_scope": "4x4 Connect-K (k=3), every reachable state",
+      "residue_scope": "3x3 Go with simple ko, every reachable state",
+      "minimal_sufficient_state": "board occupancy plus side-to-move",
+      "residue_state": "board, side-to-move, previous-board residue, and pass count",
+      "reachable_full_states": 6036001,
+      "directed_legal_edges": 23453344,
+      "residue_system_full_states": 132161,
+      "residue_sensitive_visible_classes": 752,
+      "renderer_value_mismatches": 0,
+      "work_unit": "root alpha-beta nodes",
+      "full_work_units": 245560,
+      "renderer_work_units": 32,
+      "work_reduction_fraction": 0.9998696856165499,
+      "work_reduction_factor": 7673.75,
+      "invariant_checks": {
+        "reachable_full_states": true,
+        "directed_legal_edges": true,
+        "all_state_value_mismatches": true,
+        "baseline_nodes": true,
+        "renderer_nodes": true,
+        "go_reachable_full_states": true,
+        "residue_sensitive_classes": true
+      },
+      "witness": {
+        "board_rows": [
+          "B.B",
+          "WB.",
+          "..."
+        ],
+        "to_move": "W",
+        "pass_count": 0,
+        "differing_action": [
+          0,
+          1
+        ],
+        "legal_history_depth": 5,
+        "blocked_history_depth": 5,
+        "legal_history": [
+          {
+            "ply": 1,
+            "player": "B",
+            "action": [
+              0,
+              0
+            ]
+          },
+          {
+            "ply": 2,
+            "player": "W",
+            "action": [
+              1,
+              0
+            ]
+          },
+          {
+            "ply": 3,
+            "player": "B",
+            "action": [
+              0,
+              2
+            ]
+          },
+          {
+            "ply": 4,
+            "player": "W",
+            "action": "pass"
+          },
+          {
+            "ply": 5,
+            "player": "B",
+            "action": [
+              1,
+              1
+            ]
+          }
+        ],
+        "blocked_history": [
+          {
+            "ply": 1,
+            "player": "B",
+            "action": [
+              0,
+              2
+            ]
+          },
+          {
+            "ply": 2,
+            "player": "W",
+            "action": [
+              0,
+              1
+            ]
+          },
+          {
+            "ply": 3,
+            "player": "B",
+            "action": [
+              1,
+              1
+            ]
+          },
+          {
+            "ply": 4,
+            "player": "W",
+            "action": [
+              1,
+              0
+            ]
+          },
+          {
+            "ply": 5,
+            "player": "B",
+            "action": [
+              0,
+              0
+            ]
+          }
+        ],
+        "legal_previous_board_rows": [
+          "B.B",
+          "W..",
+          "..."
+        ],
+        "blocked_previous_board_rows": [
+          ".WB",
+          "WB.",
+          "..."
+        ],
+        "legal_action_set": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "blocked_action_set": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "blocked_move_restores_previous_board": true
+      },
+      "elapsed_seconds": 0.0009903310019581113,
+      "interpretation": "Game exactness and residue results are preserved from WRRA Game 1.0; this adapter validates its ledger invariants rather than relabelling the historical run as a new prospective experiment."
+    },
+    {
+      "domain": "power_grid",
+      "status": "PASS",
+      "model": "three-bus DC grid with two labelled identical peakers, two labelled identical curtailment blocks, and thermal-memory line constraints",
+      "exact_scope": "all states reachable over a six-step deterministic demand trace",
+      "law": {
+        "demand_trace": [
+          3,
+          4,
+          5,
+          4,
+          5,
+          3
+        ],
+        "line_capacity": [
+          "2",
+          "3/2",
+          "3/2"
+        ],
+        "thermal_update": "h' = 1/2 h + max(0, |f|-capacity)",
+        "thermal_limit": "3/2",
+        "slack_generation_range": [
+          0,
+          4
+        ],
+        "objective": "minimize exact cumulative operating cost subject to balance and thermal survival"
+      },
+      "minimal_sufficient_state": "time index and three line thermal residues",
+      "visible_state_ablation": "time index and demand only",
+      "reachable_full_states": 4409,
+      "directed_legal_edges": 28517,
+      "residue_sensitive_visible_classes": 1,
+      "value_sensitive_visible_classes": 2,
+      "renderer_value_mismatches": 0,
+      "work_unit": "legal labelled action evaluations across reachable states",
+      "full_work_units": 28517,
+      "renderer_work_units": 15242,
+      "work_reduction_fraction": 0.46551179997896,
+      "work_reduction_factor": 1.8709486943970608,
+      "root_exact_cost": 30,
+      "root_renderer_cost": 30,
+      "witness": {
+        "visible_state": {
+          "t": 4,
+          "demand": 5
+        },
+        "state_a_heat": [
+          "0",
+          "0",
+          "0"
+        ],
+        "state_b_heat": [
+          "13/12",
+          "1/24",
+          "0"
+        ],
+        "state_a_legal_actions": [
+          "P00-S01",
+          "P00-S10",
+          "P00-S11",
+          "P01-S00",
+          "P01-S01",
+          "P01-S10",
+          "P01-S11",
+          "P10-S00",
+          "P10-S01",
+          "P10-S10",
+          "P10-S11",
+          "P11-S00",
+          "P11-S01",
+          "P11-S10",
+          "P11-S11"
+        ],
+        "state_b_legal_actions": [
+          "P00-S01",
+          "P00-S10",
+          "P00-S11",
+          "P01-S01",
+          "P01-S10",
+          "P01-S11",
+          "P10-S01",
+          "P10-S10",
+          "P10-S11",
+          "P11-S00",
+          "P11-S01",
+          "P11-S10",
+          "P11-S11"
+        ],
+        "state_a_exact_cost_to_go": 10,
+        "state_b_exact_cost_to_go": 12
+      },
+      "elapsed_seconds": 6.501598910999746,
+      "interpretation": "Thermal residue is present constraint information: equal current demand does not imply equal safe action sets when line heat differs. The exact Renderer removes only actions with identical full successors and cost."
+    },
+    {
+      "domain": "scheduling",
+      "status": "PASS",
+      "model": "six labelled jobs, two identical machines, and family-dependent setup time",
+      "exact_scope": "every state reachable from the declared six-job root",
+      "law": {
+        "jobs": [
+          {
+            "identifier": "A1",
+            "family": "A",
+            "duration": 2
+          },
+          {
+            "identifier": "A2",
+            "family": "A",
+            "duration": 2
+          },
+          {
+            "identifier": "A3",
+            "family": "A",
+            "duration": 2
+          },
+          {
+            "identifier": "B1",
+            "family": "B",
+            "duration": 3
+          },
+          {
+            "identifier": "B2",
+            "family": "B",
+            "duration": 3
+          },
+          {
+            "identifier": "B3",
+            "family": "B",
+            "duration": 3
+          }
+        ],
+        "machines": 2,
+        "setup_time_same_family": 0,
+        "setup_time_changed_family": 2,
+        "objective": "minimize exact makespan"
+      },
+      "minimal_sufficient_state": "remaining labelled jobs plus each machine's availability and last-family residue",
+      "visible_state_ablation": "remaining job types and machine availability only",
+      "reachable_full_states": 1103,
+      "directed_legal_edges": 4188,
+      "residue_sensitive_visible_classes": 37,
+      "value_sensitive_visible_classes": 6,
+      "renderer_value_mismatches": 0,
+      "work_unit": "labelled job-machine action evaluations across reachable states",
+      "full_work_units": 4188,
+      "renderer_work_units": 3090,
+      "work_reduction_fraction": 0.26217765042979946,
+      "work_reduction_factor": 1.3553398058252428,
+      "root_exact_makespan": 9,
+      "root_renderer_makespan": 9,
+      "witness": {
+        "visible_state": {
+          "remaining_job_types": [
+            [
+              "A",
+              2
+            ],
+            [
+              "A",
+              2
+            ]
+          ],
+          "machine_availability": [
+            6,
+            7
+          ]
+        },
+        "state_a_last_families": [
+          "B",
+          "B"
+        ],
+        "state_b_last_families": [
+          "B",
+          "A"
+        ],
+        "state_a_transition_profile": [
+          [
+            "A",
+            2,
+            6,
+            2
+          ],
+          [
+            "A",
+            2,
+            7,
+            2
+          ]
+        ],
+        "state_b_transition_profile": [
+          [
+            "A",
+            2,
+            6,
+            2
+          ],
+          [
+            "A",
+            2,
+            7,
+            0
+          ]
+        ],
+        "state_a_exact_makespan": 11,
+        "state_b_exact_makespan": 10
+      },
+      "elapsed_seconds": 0.07780329900197103,
+      "interpretation": "The last processed family is present setup-state information. Equal machine availability and remaining job types can admit different next transition costs when this residue differs. The exact Renderer quotients only job-label and machine-permutation equivalents."
+    }
+  ],
+  "game_reproduction": {
+    "published_file": "baselines/wrra_game_0_2_results_published.json",
+    "published_sha256": "bed55e8efda6f8972be0cecc04f929d900fd4292278fdce82262500bc0abbab8",
+    "reproduced_file": "results/reproduced_game_0_2_results.json",
+    "reproduced_sha256": "4f7b2810f17969a83ebf7d1171dede8637b4df10ba21493f5b96eb99038ffeec",
+    "all_declared_invariants_match": true,
+    "comparisons": {
+      "connect_k.reachable_full_states": {
+        "published": 6036001,
+        "reproduced": 6036001,
+        "match": true
+      },
+      "connect_k.directed_legal_edges": {
+        "published": 23453344,
+        "reproduced": 23453344,
+        "match": true
+      },
+      "connect_k.all_state_value_mismatches": {
+        "published": 0,
+        "reproduced": 0,
+        "match": true
+      },
+      "connect_k.root_baseline_nodes": {
+        "published": 245560,
+        "reproduced": 245560,
+        "match": true
+      },
+      "connect_k.root_renderer_nodes": {
+        "published": 32,
+        "reproduced": 32,
+        "match": true
+      },
+      "go.reachable_full_states": {
+        "published": 132161,
+        "reproduced": 132161,
+        "match": true
+      },
+      "go.residue_sensitive_classes": {
+        "published": 752,
+        "reproduced": 752,
+        "match": true
+      }
+    },
+    "excluded_from_identity_check": [
+      "elapsed_seconds",
+      "elapsed_seconds_total"
+    ]
+  },
+  "preserved_grid_scarcity_baseline": {
+    "source_file": "baselines/wrra_grid_scarcity_stress_summary_published.json",
+    "source_sha256": "fe82be9fef28fa70b1376a3954bd48195c38144c1713452f3796af8f76478baa",
+    "status": "EXPLORATORY scarcity stress test; thresholds are interval-censored to tested levels",
+    "episodes": 50400,
+    "resource_constraint": "generation MW + 0.30*storage MWh + 8*controller base-compute = 408 equivalent units for every architecture",
+    "g0_survival_curve_area": 0.8533928571428572,
+    "g2_survival_curve_area": 0.850922619047619,
+    "g0_mean_active_compute": 114.03756964285714,
+    "g2_mean_active_compute": 183.01988571428578,
+    "interpretation": "Preserved external-scale stochastic baseline. It is reported separately from the new exact finite-grid Renderer test."
+  },
+  "cross_domain_conclusion": {
+    "all_domains_passed": true,
+    "all_renderer_mismatches_zero": true,
+    "all_domains_show_residue_sensitivity": true,
+    "all_domains_reduce_work": true,
+    "claim": "The fixed WRRA execution grammar was instantiated without structural change in three finite domains, and every certified reduction preserved the exact objective in its stated scope. This is evidence of cross-domain portability, not a proof of universal applicability."
+  },
+  "elapsed_seconds_total": 6.5831936260001385
+}

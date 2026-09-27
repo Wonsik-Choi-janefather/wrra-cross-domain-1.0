@@ -1,0 +1,4 @@
+domain,status,exact_scope,reachable_full_states,residue_sensitive_visible_classes,renderer_value_mismatches,work_unit,full_work_units,renderer_work_units,work_reduction_fraction,work_reduction_factor
+game,PASS,"4x4 Connect-K (k=3), every reachable state",6036001,752,0,root alpha-beta nodes,245560,32,0.9998696856165499,7673.75
+power_grid,PASS,all states reachable over a six-step deterministic demand trace,4409,1,0,legal labelled action evaluations across reachable states,28517,15242,0.46551179997896,1.8709486943970608
+scheduling,PASS,every state reachable from the declared six-job root,1103,37,0,labelled job-machine action evaluations across reachable states,4188,3090,0.26217765042979946,1.3553398058252428

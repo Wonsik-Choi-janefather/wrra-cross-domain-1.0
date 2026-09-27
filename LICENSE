@@ -1,0 +1,6 @@
+This release uses two licenses by file scope.
+
+1. Source code in src, tests, tools, and vendor is licensed under the MIT License. See LICENSE-CODE.
+2. Reports, documentation, protocol, figures, and machine-readable result data are licensed under Creative Commons Attribution 4.0 International. See LICENSE-CONTENT.
+
+Copyright 2026 Wonsik Choi

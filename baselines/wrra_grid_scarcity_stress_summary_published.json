@@ -1,0 +1,148 @@
+{
+  "runs_per_point": 120,
+  "levels": [
+    0.5,
+    0.6,
+    0.7,
+    0.75,
+    0.85,
+    1.0,
+    1.1,
+    1.2,
+    1.35,
+    1.5
+  ],
+  "environments": [
+    "heatwave",
+    "renewable_drop",
+    "generator_trip",
+    "line_trip",
+    "sensor_noise",
+    "cyber_false_data",
+    "compound_boundary"
+  ],
+  "summary": [
+    {
+      "controller": "G0",
+      "name": "Memoryless local",
+      "worst_axis_threshold": 0.6,
+      "mean_axis_threshold": 1.3285714285714285,
+      "survival_curve_area": 0.8533928571428572,
+      "mean_active_compute": 114.03756964285714,
+      "reserve_existence": 0,
+      "generation_capacity": 400.0,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.2,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.5,
+        "line_trip": 1.5,
+        "sensor_noise": 1.5,
+        "cyber_false_data": 1.5,
+        "compound_boundary": 0.6
+      }
+    },
+    {
+      "controller": "G1",
+      "name": "Central current optimizer",
+      "worst_axis_threshold": 0.6,
+      "mean_axis_threshold": 1.1785714285714286,
+      "survival_curve_area": 0.7496726190476191,
+      "mean_active_compute": 315.4912071428572,
+      "reserve_existence": 0,
+      "generation_capacity": 388.0,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.2,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.35,
+        "line_trip": 1.5,
+        "sensor_noise": 1.35,
+        "cyber_false_data": 0.75,
+        "compound_boundary": 0.6
+      }
+    },
+    {
+      "controller": "G2",
+      "name": "WRRA residual state",
+      "worst_axis_threshold": 0.6,
+      "mean_axis_threshold": 1.3071428571428572,
+      "survival_curve_area": 0.850922619047619,
+      "mean_active_compute": 183.01988571428578,
+      "reserve_existence": 90,
+      "generation_capacity": 369.0,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.2,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.35,
+        "line_trip": 1.5,
+        "sensor_noise": 1.5,
+        "cyber_false_data": 1.5,
+        "compound_boundary": 0.6
+      }
+    },
+    {
+      "controller": "G3",
+      "name": "WRRA valenced memory",
+      "worst_axis_threshold": 0.5,
+      "mean_axis_threshold": 1.292857142857143,
+      "survival_curve_area": 0.8444047619047618,
+      "mean_active_compute": 220.84154761904733,
+      "reserve_existence": 110,
+      "generation_capacity": 360.6,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.2,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.35,
+        "line_trip": 1.5,
+        "sensor_noise": 1.5,
+        "cyber_false_data": 1.5,
+        "compound_boundary": 0.5
+      }
+    },
+    {
+      "controller": "G4",
+      "name": "WRRA distributed reserve",
+      "worst_axis_threshold": 0.5,
+      "mean_axis_threshold": 1.292857142857143,
+      "survival_curve_area": 0.8408928571428571,
+      "mean_active_compute": 203.95566547619023,
+      "reserve_existence": 170,
+      "generation_capacity": 343.4,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.2,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.35,
+        "line_trip": 1.5,
+        "sensor_noise": 1.5,
+        "cyber_false_data": 1.5,
+        "compound_boundary": 0.5
+      }
+    },
+    {
+      "controller": "G5",
+      "name": "Always-active overbuilt",
+      "worst_axis_threshold": 0.0,
+      "mean_axis_threshold": 1.2214285714285715,
+      "survival_curve_area": 0.8263690476190476,
+      "mean_active_compute": 594.0192416666657,
+      "reserve_existence": 310,
+      "generation_capacity": 276.6,
+      "resource_budget_used": 408.0,
+      "thresholds": {
+        "heatwave": 1.35,
+        "renewable_drop": 1.5,
+        "generator_trip": 1.2,
+        "line_trip": 1.5,
+        "sensor_noise": 1.5,
+        "cyber_false_data": 1.5,
+        "compound_boundary": 0.0
+      }
+    }
+  ],
+  "resource_constraint": "generation MW + 0.30*storage MWh + 8*controller base-compute = 408 equivalent units for every architecture",
+  "status": "EXPLORATORY scarcity stress test; thresholds are interval-censored to tested levels"
+}
