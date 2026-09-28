@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software or report, please cite the Zenodo record for WRRA Cross Domain 1.0."
+message: "If you use this software or report, cite this repository until a Zenodo DOI for this exact Cross Domain package is independently verified."
 title: "WRRA Cross Domain 1.0 Comparative Exact Validation in Games Power Grids and Scheduling"
 type: software
 version: 1.0.0
