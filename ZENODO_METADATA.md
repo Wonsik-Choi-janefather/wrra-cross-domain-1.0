@@ -39,6 +39,4 @@ MIT for source code and CC BY 4.0 for reports data figures and documentation
 
 - 10.5281/zenodo.22650956 WRRA Core 1.0
 - 10.5281/zenodo.22985378 WRRA Game 1.0
-- 10.5281/zenodo.22330256 related WRRA Grid record
-- 10.5281/zenodo.22331940 related WRRA Grid record
-- 10.5281/zenodo.22447864 related WRRA Grid record
+- The earlier three entries labeled as grid records were withdrawn after verifying that the DOIs belong to WRRA interpretation/prediction papers. They are not grid experiment deposits.
