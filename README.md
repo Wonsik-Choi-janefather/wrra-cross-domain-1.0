@@ -110,7 +110,7 @@ Heuristic ranking can be added later, but it must be reported separately and may
 
 - WRRA Core 1.0 DOI `10.5281/zenodo.22650956`
 - WRRA Game 1.0 DOI `10.5281/zenodo.22985378`
-- Related WRRA Grid records DOI `10.5281/zenodo.22330256`, `10.5281/zenodo.22331940`, and `10.5281/zenodo.22447864`
+- The three DOIs previously listed here as “Grid records” were misidentified. They actually resolve to *WRRA Is an Interpreter* (22330256), *The Boundary Between Interpretation and Prediction Through WRRA* (22331940), and *WRRA Criteria for Classifying Interpretation and Prediction* (22447864); they are not grid experiment deposits. A DOI for this Cross Domain package has not been verified.
 
 The historical Game and Grid studies retain their original scope and status. The analysis plan is prospective only for the new finite grid and scheduling runs and retrospective for the harmonized use of previously published results.
 
