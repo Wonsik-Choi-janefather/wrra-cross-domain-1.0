@@ -8,6 +8,7 @@ repository-code: "https://github.com/Wonsik-Choi-janefather/wrra-cross-domain-1.
 authors:
   - family-names: Choi
     given-names: Wonsik
+    orcid: "https://orcid.org/0009-0001-4263-9772"
     email: janefather@gmail.com
 license:
   - MIT
